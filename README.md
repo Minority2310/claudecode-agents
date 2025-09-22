@@ -164,7 +164,8 @@
 
 ```bash
 cd ~/.claude
-git clone -b model-cn --single-branch https://github.com/Minority2310/claudecode-agents.git
+git clone -b model-cn --single-branch \
+  https://github.com/Minority2310/claudecode-agents.git agents
 ```
 
 子代理放置在 `~/.claude/agents/` 目录后将自动可用于Claude Code。
