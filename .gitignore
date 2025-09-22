@@ -2,6 +2,15 @@
 .DS_Store
 Desktop.ini
 
+# IDE and Editor Files
+## VSCode
+.vscode/*
+!.vscode/extensions.json
+
+## JetBrains
+.idea
+
+
 # Thumbnail cache files
 ._*
 Thumbs.db

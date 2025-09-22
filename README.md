@@ -1,533 +1,447 @@
-# Claude Code Subagents Collection
+# Claude Code Subagents 集合
 
-A comprehensive collection of 82 specialized AI subagents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), providing domain-specific expertise across software development, infrastructure, and business operations.
+为 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 提供专业AI子代理的综合集合，在软件开发、基础设施和业务运营方面提供特定领域的专业知识。
 
-## Overview
+## 概览
 
-This repository provides production-ready subagents that extend Claude Code's capabilities with specialized knowledge. Each subagent incorporates:
+此存储库提供了扩展 Claude Code 功能的生产就绪子代理，每个都具有专业知识。每个子代理包含：
 
-- Current industry best practices and standards (2024/2025)
-- Production-ready patterns and enterprise architectures
-- Deep domain expertise with 8-12 capability areas per agent
-- Modern technology stacks and frameworks
-- Optimized model selection based on task complexity
+- 当前行业最佳实践和标准（2024/2025）
+- 生产就绪模式和企业架构
+- 深度领域专业知识，每个代理具备8-12项能力领域
+- 现代技术栈和框架
+- 基于任务复杂性的优化模型选择
 
-## Agent Categories
+## 代理分类
 
-### Architecture & System Design
+### 架构与系统设计
 
-#### Core Architecture
+#### 核心架构
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [backend-architect](backend-architect.md) | opus | RESTful API design, microservice boundaries, database schemas |
-| [frontend-developer](frontend-developer.md) | sonnet | React components, responsive layouts, client-side state management |
-| [graphql-architect](graphql-architect.md) | opus | GraphQL schemas, resolvers, federation architecture |
-| [architect-reviewer](architect-review.md) | opus | Architectural consistency analysis and pattern validation |
-| [cloud-architect](cloud-architect.md) | opus | AWS/Azure/GCP infrastructure design and cost optimization |
-| [hybrid-cloud-architect](hybrid-cloud-architect.md) | opus | Multi-cloud strategies across cloud and on-premises environments |
-| [kubernetes-architect](kubernetes-architect.md) | opus | Cloud-native infrastructure with Kubernetes and GitOps |
+| [backend-architect](backend-architect.md) | GLM-4.5 | RESTful API设计、微服务边界、数据库模式 |
+| [frontend-developer](frontend-developer.md) | GLM-4.5 | React组件、响应式布局、客户端状态管理 |
+| [graphql-architect](graphql-architect.md) | GLM-4.5 | GraphQL模式、解析器、联邦架构 |
+| [architect-reviewer](architect-review.md) | GLM-4.5 | 架构一致性分析和模式验证 |
+| ~~[cloud-architect](cloud-architect.md)~~ | ~~opus~~ | AWS/Azure/GCP基础设施设计和成本优化 |
+| ~~[hybrid-cloud-architect](hybrid-cloud-architect.md)~~ | ~~opus~~ | 跨云和本地环境的多云策略 |
+| ~~[kubernetes-architect](kubernetes-architect.md)~~ | ~~opus~~ | 使用Kubernetes和GitOps的云原生基础设施 |
 
-#### UI/UX & Mobile
+#### UI/UX与移动端
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [ui-ux-designer](ui-ux-designer.md) | sonnet | Interface design, wireframes, design systems |
-| [ui-visual-validator](ui-visual-validator.md) | sonnet | Visual regression testing and UI verification |
-| [mobile-developer](mobile-developer.md) | sonnet | React Native and Flutter application development |
-| [ios-developer](ios-developer.md) | sonnet | Native iOS development with Swift/SwiftUI |
-| [flutter-expert](flutter-expert.md) | sonnet | Advanced Flutter development with state management |
+| ~~[ui-ux-designer](ui-ux-designer.md)~~ | sonnet | 界面设计、线框图、设计系统 |
+| ~~[ui-visual-validator](ui-visual-validator.md)~~ | sonnet | 视觉回归测试和UI验证 |
+| ~~[mobile-developer](mobile-developer.md)~~ | sonnet | React Native和Flutter应用程序开发 |
+| ~~[ios-developer](ios-developer.md)~~ | sonnet | 使用Swift/SwiftUI的原生iOS开发 |
+| ~~[flutter-expert](flutter-expert.md)~~ | sonnet | 带状态管理的高级Flutter开发 |
 
-### Programming Languages
+### 编程语言
 
-#### Systems & Low-Level
+#### 系统与低级编程
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [c-pro](c-pro.md) | sonnet | System programming with memory management and OS interfaces |
-| [cpp-pro](cpp-pro.md) | sonnet | Modern C++ with RAII, smart pointers, STL algorithms |
-| [rust-pro](rust-pro.md) | sonnet | Memory-safe systems programming with ownership patterns |
-| [golang-pro](golang-pro.md) | sonnet | Concurrent programming with goroutines and channels |
+| ~~[c-pro](c-pro.md)~~ | ~~sonnet~~ | 带内存管理和OS接口的系统编程 |
+| ~~[cpp-pro](cpp-pro.md)~~ | ~~sonnet~~ | 带RAII、智能指针、STL算法的现代C++ |
+| ~~[rust-pro](rust-pro.md)~~ | ~~sonnet~~ | 带所有权模式的内存安全系统编程 |
+| [golang-pro](golang-pro.md) | GLM-4.5 | 使用goroutines和channels的并发编程 |
 
-#### Web & Application
+#### Web与应用程序
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [javascript-pro](javascript-pro.md) | sonnet | Modern JavaScript with ES6+, async patterns, Node.js |
-| [typescript-pro](typescript-pro.md) | sonnet | Advanced TypeScript with type systems and generics |
-| [python-pro](python-pro.md) | sonnet | Python development with advanced features and optimization |
-| [ruby-pro](ruby-pro.md) | sonnet | Ruby with metaprogramming, Rails patterns, gem development |
-| [php-pro](php-pro.md) | sonnet | Modern PHP with frameworks and performance optimization |
+| [javascript-pro](javascript-pro.md) | GLM-4.5 | 带ES6+、异步模式、Node.js的现代JavaScript |
+| [typescript-pro](typescript-pro.md) | GLM-4.5 | 带类型系统和泛型的高级TypeScript |
+| [python-pro](python-pro.md) | GLM-4.5 | 带高级功能和优化的Python开发 |
+| [ruby-pro](ruby-pro.md) | GLM-4.5 | 带元编程、Rails模式、gem开发的Ruby |
+| [php-pro](php-pro.md) | GLM-4.5 | 带框架和性能优化的现代PHP |
 
-#### Enterprise & JVM
+#### 企业与JVM
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [java-pro](java-pro.md) | sonnet | Modern Java with streams, concurrency, JVM optimization |
-| [scala-pro](scala-pro.md) | sonnet | Enterprise Scala with functional programming and distributed systems |
-| [csharp-pro](csharp-pro.md) | sonnet | C# development with .NET frameworks and patterns |
+| [java-pro](java-pro.md) | GLM-4.5 | 带流、并发、JVM优化的现代Java |
+| ~~[scala-pro](scala-pro.md)~~ | ~~sonnet~~ | 带函数式编程和分布式系统的企业Scala |
+| ~~[csharp-pro](csharp-pro.md)~~ | ~~sonnet~~ | 带.NET框架和模式的C#开发 |
 
-#### Specialized Platforms
+#### 专业平台
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [elixir-pro](elixir-pro.md) | sonnet | Elixir with OTP patterns and Phoenix frameworks |
-| [unity-developer](unity-developer.md) | sonnet | Unity game development and optimization |
-| [minecraft-bukkit-pro](minecraft-bukkit-pro.md) | sonnet | Minecraft server plugin development |
-| [sql-pro](sql-pro.md) | sonnet | Complex SQL queries and database optimization |
+| ~~[elixir-pro](elixir-pro.md)~~ | ~~sonnet~~ | 带OTP模式和Phoenix框架的Elixir |
+| ~~[unity-developer](unity-developer.md)~~ | ~~sonnet~~ | Unity游戏开发和优化 |
+| ~~[minecraft-bukkit-pro](minecraft-bukkit-pro.md)~~ | ~~sonnet~~ | Minecraft服务器插件开发 |
+| [sql-pro](sql-pro.md) | GLM-4.5 | 复杂SQL查询和数据库优化 |
 
-### Infrastructure & Operations
+### 基础设施与运维
 
-#### DevOps & Deployment
+#### DevOps与部署
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [devops-troubleshooter](devops-troubleshooter.md) | sonnet | Production debugging, log analysis, deployment troubleshooting |
-| [deployment-engineer](deployment-engineer.md) | sonnet | CI/CD pipelines, containerization, cloud deployments |
-| [terraform-specialist](terraform-specialist.md) | opus | Infrastructure as Code with Terraform modules and state management |
-| [dx-optimizer](dx-optimizer.md) | sonnet | Developer experience optimization and tooling improvements |
+| [devops-troubleshooter](devops-troubleshooter.md) | GLM-4.5 | 生产调试、日志分析、部署故障排除 |
+| [deployment-engineer](deployment-engineer.md) | GLM-4.5 | CI/CD管道、容器化、云部署 |
+| ~~[terraform-specialist](terraform-specialist.md)~~ | ~~opus~~ | 带Terraform模块和状态管理的基础设施即代码 |
+| ~~[dx-optimizer](dx-optimizer.md)~~ | ~~sonnet~~ | 开发者体验优化和工具改进 |
 
-#### Database Management
+#### 数据库管理
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [database-optimizer](database-optimizer.md) | opus | Query optimization, index design, migration strategies |
-| [database-admin](database-admin.md) | sonnet | Database operations, backup, replication, monitoring |
+| [database-optimizer](database-optimizer.md) | GLM-4.5 | 查询优化、索引设计、迁移策略 |
+| [database-admin](database-admin.md) | GLM-4.5 | 数据库运维、备份、复制、监控 |
 
-#### Incident Response & Network
+#### 事件响应与网络
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [incident-responder](incident-responder.md) | opus | Production incident management and resolution |
-| [network-engineer](network-engineer.md) | sonnet | Network debugging, load balancing, traffic analysis |
+| [incident-responder](incident-responder.md) | GLM-4.5 | 生产事件管理和解决 |
+| [network-engineer](network-engineer.md) | GLM-4.5 | 网络调试、负载均衡、流量分析 |
 
-### Quality Assurance & Security
+### 质量保证与安全
 
-#### Code Quality & Review
+#### 代码质量与审查
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [code-reviewer](code-reviewer.md) | opus | Code review with security focus and production reliability |
-| [security-auditor](security-auditor.md) | opus | Vulnerability assessment and OWASP compliance |
-| [backend-security-coder](backend-security-coder.md) | opus | Secure backend coding practices, API security implementation |
-| [frontend-security-coder](frontend-security-coder.md) | opus | XSS prevention, CSP implementation, client-side security |
-| [mobile-security-coder](mobile-security-coder.md) | opus | Mobile security patterns, WebView security, biometric auth |
-| [architect-reviewer](architect-review.md) | opus | Architectural consistency and pattern validation |
+| [code-reviewer](code-reviewer.md) | GLM-4.5 | 注重安全的代码审查和生产可靠性 |
+| [security-auditor](security-auditor.md) | GLM-4.5 | 漏洞评估和OWASP合规 |
+| [backend-security-coder](backend-security-coder.md) | GLM-4.5 | 安全后端编码实践、API安全实现 |
+| [frontend-security-coder](frontend-security-coder.md) | GLM-4.5 | XSS防护、CSP实现、客户端安全 |
+| ~~[mobile-security-coder](mobile-security-coder.md)~~ | ~~opus~~ | 移动安全模式、WebView安全、生物识别认证 |
+| [architect-reviewer](architect-review.md) | GLM-4.5 | 架构一致性和模式验证 |
 
-#### Testing & Debugging
+#### 测试与调试
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [test-automator](test-automator.md) | sonnet | Comprehensive test suite creation (unit, integration, e2e) |
-| [tdd-orchestrator](tdd-orchestrator.md) | sonnet | Test-Driven Development methodology guidance |
-| [debugger](debugger.md) | sonnet | Error resolution and test failure analysis |
-| [error-detective](error-detective.md) | sonnet | Log analysis and error pattern recognition |
+| [test-automator](test-automator.md) | GLM-4.5 | 综合测试套件创建（单元、集成、e2e） |
+| [tdd-orchestrator](tdd-orchestrator.md) | GLM-4.5 | 测试驱动开发方法指导 |
+| [debugger](debugger.md) | GLM-4.5 | 错误解决和测试失败分析 |
+| [error-detective](error-detective.md) | GLM-4.5 | 日志分析和错误模式识别 |
 
-#### Performance & Research
+#### 性能与研究
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [performance-engineer](performance-engineer.md) | opus | Application profiling and optimization |
-| [search-specialist](search-specialist.md) | haiku | Advanced web research and information synthesis |
+| [performance-engineer](performance-engineer.md) | GLM-4.5 | 应用程序分析和优化 |
+| [search-specialist](search-specialist.md) | GLM-4.5 | 高级网络研究和信息综合 |
 
-### Data & AI
+### 数据与AI
 
-#### Data Engineering & Analytics
+#### 数据工程与分析
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [data-scientist](data-scientist.md) | opus | Data analysis, SQL queries, BigQuery operations |
-| [data-engineer](data-engineer.md) | sonnet | ETL pipelines, data warehouses, streaming architectures |
+| [data-scientist](data-scientist.md) | GLM-4.5 | 数据分析、SQL查询、BigQuery操作 |
+| [data-engineer](data-engineer.md) | GLM-4.5 | ETL管道、数据仓库、流式架构 |
 
-#### Machine Learning & AI
+#### 机器学习与AI
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [ai-engineer](ai-engineer.md) | opus | LLM applications, RAG systems, prompt pipelines |
-| [ml-engineer](ml-engineer.md) | opus | ML pipelines, model serving, feature engineering |
-| [mlops-engineer](mlops-engineer.md) | opus | ML infrastructure, experiment tracking, model registries |
-| [prompt-engineer](prompt-engineer.md) | opus | LLM prompt optimization and engineering |
+| ~~[ai-engineer](ai-engineer.md)~~ | ~~GLM-4.5~~ | LLM应用、RAG系统、提示管道 |
+| ~~[ml-engineer](ml-engineer.md)~~ | ~~GLM-4.5~~ | ML管道、模型服务、特征工程 |
+| ~~[mlops-engineer](mlops-engineer.md)~~ | ~~GLM-4.5~~ | ML基础设施、实验跟踪、模型注册表 |
+| [prompt-engineer](prompt-engineer.md) | GLM-4.5 | LLM提示优化和工程 |
 
-### Documentation & Technical Writing
+### 文档与技术写作
 
-| Agent | Model | Description |
+| 代理 | 模型 | 描述 |
 |-------|-------|-------------|
-| [docs-architect](docs-architect.md) | opus | Comprehensive technical documentation generation |
-| [api-documenter](api-documenter.md) | sonnet | OpenAPI/Swagger specifications and developer docs |
-| [reference-builder](reference-builder.md) | haiku | Technical references and API documentation |
-| [tutorial-engineer](tutorial-engineer.md) | sonnet | Step-by-step tutorials and educational content |
-| [mermaid-expert](mermaid-expert.md) | sonnet | Diagram creation (flowcharts, sequences, ERDs) |
+| [docs-architect](docs-architect.md) | GLM-4.5 | 综合技术文档生成 |
+| [api-documenter](api-documenter.md) | GLM-4.5 | OpenAPI/Swagger规范和开发者文档 |
+| [reference-builder](reference-builder.md) | GLM-4.5 | 技术参考和API文档 |
+| [tutorial-engineer](tutorial-engineer.md) | GLM-4.5 | 分步教程和教育内容 |
+| [mermaid-expert](mermaid-expert.md) | GLM-4.5 | 图表创建（流程图、序列图、ERD） |
 
-### Business & Operations
+## 安装
 
-#### Business Analysis & Finance
-
-| Agent | Model | Description |
-|-------|-------|-------------|
-| [business-analyst](business-analyst.md) | sonnet | Metrics analysis, reporting, KPI tracking |
-| [quant-analyst](quant-analyst.md) | opus | Financial modeling, trading strategies, market analysis |
-| [risk-manager](risk-manager.md) | sonnet | Portfolio risk monitoring and management |
-
-#### Marketing & Sales
-
-| Agent | Model | Description |
-|-------|-------|-------------|
-| [content-marketer](content-marketer.md) | sonnet | Blog posts, social media, email campaigns |
-| [sales-automator](sales-automator.md) | haiku | Cold emails, follow-ups, proposal generation |
-
-#### Support & Legal
-
-| Agent | Model | Description |
-|-------|-------|-------------|
-| [customer-support](customer-support.md) | sonnet | Support tickets, FAQ responses, customer communication |
-| [hr-pro](hr-pro.md) | opus | HR operations, policies, employee relations |
-| [legal-advisor](legal-advisor.md) | opus | Privacy policies, terms of service, legal documentation |
-
-### Specialized Domains
-
-| Agent | Model | Description |
-|-------|-------|-------------|
-| [blockchain-developer](blockchain-developer.md) | sonnet | Web3 apps, smart contracts, DeFi protocols |
-| [payment-integration](payment-integration.md) | sonnet | Payment processor integration (Stripe, PayPal) |
-| [legacy-modernizer](legacy-modernizer.md) | sonnet | Legacy code refactoring and modernization |
-| [context-manager](context-manager.md) | haiku | Multi-agent context management |
-
-### SEO & Content Optimization
-
-| Agent | Model | Description |
-|-------|-------|-------------|
-| [seo-content-auditor](seo-content-auditor.md) | sonnet | Content quality analysis, E-E-A-T signals assessment |
-| [seo-meta-optimizer](seo-meta-optimizer.md) | haiku | Meta title and description optimization |
-| [seo-keyword-strategist](seo-keyword-strategist.md) | haiku | Keyword analysis and semantic variations |
-| [seo-structure-architect](seo-structure-architect.md) | haiku | Content structure and schema markup |
-| [seo-snippet-hunter](seo-snippet-hunter.md) | haiku | Featured snippet formatting |
-| [seo-content-refresher](seo-content-refresher.md) | haiku | Content freshness analysis |
-| [seo-cannibalization-detector](seo-cannibalization-detector.md) | haiku | Keyword overlap detection |
-| [seo-authority-builder](seo-authority-builder.md) | sonnet | E-E-A-T signal analysis |
-| [seo-content-writer](seo-content-writer.md) | sonnet | SEO-optimized content creation |
-| [seo-content-planner](seo-content-planner.md) | haiku | Content planning and topic clusters |
-
-## Model Configuration
-
-Agents are assigned to specific Claude models based on task complexity and computational requirements. The system uses three model tiers:
-
-### Model Distribution Summary
-
-| Model | Agent Count | Use Case |
-|-------|-------------|----------|
-| Haiku | 11 | Quick, focused tasks with minimal computational overhead |
-| Sonnet | 46 | Standard development and specialized engineering tasks |
-| Opus | 21 | Complex reasoning, architecture, and critical analysis |
-
-### Haiku Model Agents
-
-| Category | Agents |
-|----------|--------|
-| Context & Reference | `context-manager`, `reference-builder`, `sales-automator`, `search-specialist` |
-| SEO Optimization | `seo-meta-optimizer`, `seo-keyword-strategist`, `seo-structure-architect`, `seo-snippet-hunter`, `seo-content-refresher`, `seo-cannibalization-detector`, `seo-content-planner` |
-
-### Sonnet Model Agents
-
-| Category | Count | Agents |
-|----------|-------|--------|
-| Programming Languages | 18 | All language-specific agents (JavaScript, Python, Java, C++, etc.) |
-| Frontend & UI | 5 | `frontend-developer`, `ui-ux-designer`, `ui-visual-validator`, `mobile-developer`, `ios-developer` |
-| Infrastructure | 8 | `devops-troubleshooter`, `deployment-engineer`, `dx-optimizer`, `database-admin`, `network-engineer`, `flutter-expert`, `api-documenter`, `tutorial-engineer` |
-| Quality & Testing | 4 | `test-automator`, `tdd-orchestrator`, `debugger`, `error-detective` |
-| Business & Support | 6 | `business-analyst`, `risk-manager`, `content-marketer`, `customer-support`, `mermaid-expert`, `legacy-modernizer` |
-| Data & Content | 5 | `data-engineer`, `payment-integration`, `seo-content-auditor`, `seo-authority-builder`, `seo-content-writer` |
-
-### Opus Model Agents
-
-| Category | Count | Agents |
-|----------|-------|--------|
-| Architecture & Design | 7 | `architect-reviewer`, `backend-architect`, `cloud-architect`, `hybrid-cloud-architect`, `kubernetes-architect`, `graphql-architect`, `terraform-specialist` |
-| Critical Analysis | 5 | `code-reviewer`, `security-auditor`, `performance-engineer`, `incident-responder`, `database-optimizer` |
-| AI/ML Complex | 5 | `ai-engineer`, `ml-engineer`, `mlops-engineer`, `data-scientist`, `prompt-engineer` |
-| Business Critical | 4 | `docs-architect`, `hr-pro`, `legal-advisor`, `quant-analyst` |
-
-## Installation
-
-Clone the repository to the Claude agents directory:
+将存储库克隆到Claude代理目录：
 
 ```bash
 cd ~/.claude
 git clone https://github.com/wshobson/agents.git
 ```
 
-The subagents will be automatically available to Claude Code once placed in the `~/.claude/agents/` directory.
+子代理放置在 `~/.claude/agents/` 目录后将自动可用于Claude Code。
 
-## Usage
+## 使用方法
 
-### Automatic Delegation
-Claude Code automatically selects the appropriate subagent based on task context and requirements. The system analyzes your request and delegates to the most suitable specialist.
+### 自动委派
+Claude Code根据任务上下文和需求自动选择合适的子代理。系统分析您的请求并委派给最合适的专家。
 
-### Explicit Invocation
-Specify a subagent by name to use a particular specialist:
+### 显式调用
+通过名称指定子代理以使用特定专家：
 
 ```
-"Use code-reviewer to analyze the recent changes"
-"Have security-auditor scan for vulnerabilities"
-"Get performance-engineer to optimize this bottleneck"
+"使用code-reviewer分析最近的更改"
+"让security-auditor扫描漏洞"
+"让performance-engineer优化这个瓶颈"
 ```
 
-## Usage Examples
+## 使用示例
 
-### Code Quality & Security
+### 代码质量与安全
 ```
-code-reviewer: Analyze component for best practices
-security-auditor: Check for OWASP compliance
-tdd-orchestrator: Implement feature with test-first approach
-performance-engineer: Profile and optimize bottlenecks
-```
-
-### Development & Architecture
-```
-backend-architect: Design authentication API
-frontend-developer: Create responsive dashboard
-graphql-architect: Design federated GraphQL schema
-mobile-developer: Build cross-platform mobile app
+code-reviewer: 分析组件的最佳实践
+security-auditor: 检查OWASP合规性
+tdd-orchestrator: 使用测试优先方法实现功能
+performance-engineer: 分析和优化瓶颈
 ```
 
-### Infrastructure & Operations
+### 开发与架构
 ```
-devops-troubleshooter: Analyze production logs
-cloud-architect: Design scalable AWS architecture
-network-engineer: Debug SSL certificate issues
-database-admin: Configure backup and replication
-terraform-specialist: Write infrastructure modules
-```
-
-### Data & Machine Learning
-```
-data-scientist: Analyze customer behavior dataset
-ai-engineer: Build RAG system for document search
-mlops-engineer: Set up experiment tracking
-ml-engineer: Deploy model to production
+backend-architect: 设计认证API
+frontend-developer: 创建响应式仪表板
+graphql-architect: 设计联邦GraphQL模式
+mobile-developer: 构建跨平台移动应用
 ```
 
-### Business & Documentation
+### 基础设施与运维
 ```
-business-analyst: Create metrics dashboard
-docs-architect: Generate technical documentation
-api-documenter: Write OpenAPI specifications
-content-marketer: Create SEO-optimized content
+devops-troubleshooter: 分析生产日志
+cloud-architect: 设计可扩展的AWS架构
+network-engineer: 调试SSL证书问题
+database-admin: 配置备份和复制
+terraform-specialist: 编写基础设施模块
 ```
 
-## Multi-Agent Workflows
-
-Subagents coordinate automatically for complex tasks. The system intelligently sequences multiple specialists based on task requirements.
-
-### Common Workflow Patterns
-
-**Feature Development**
+### 数据与机器学习
 ```
-"Implement user authentication"
+data-scientist: 分析客户行为数据集
+ai-engineer: 为文档搜索构建RAG系统
+mlops-engineer: 设置实验跟踪
+ml-engineer: 将模型部署到生产环境
+```
+
+### 业务与文档
+```
+business-analyst: 创建指标仪表板
+docs-architect: 生成技术文档
+api-documenter: 编写OpenAPI规范
+content-marketer: 创建SEO优化内容
+```
+
+## 多代理工作流
+
+子代理自动协调复杂任务。系统根据任务需求智能地排序多个专家。
+
+### 常见工作流模式
+
+**功能开发**
+
+```
+"实现用户认证"
 → backend-architect → frontend-developer → test-automator → security-auditor
 ```
 
-**Performance Optimization**
+**性能优化**
 ```
-"Optimize checkout process"
+"优化结账流程"
 → performance-engineer → database-optimizer → frontend-developer
 ```
 
-**Production Incidents**
+**生产事件**
 ```
-"Debug high memory usage"
+"调试高内存使用"
 → incident-responder → devops-troubleshooter → error-detective → performance-engineer
 ```
 
-**Infrastructure Setup**
+**基础设施设置**
 ```
-"Set up disaster recovery"
+"设置灾难恢复"
 → database-admin → database-optimizer → terraform-specialist
 ```
 
-**ML Pipeline Development**
+**ML管道开发**
+
 ```
-"Build ML pipeline with monitoring"
+"构建带监控的ML管道"
 → mlops-engineer → ml-engineer → data-engineer → performance-engineer
 ```
 
-### Integration with Claude Code Commands
+### 与Claude Code命令集成
 
-For sophisticated multi-agent orchestration, use the [Claude Code Commands](https://github.com/wshobson/commands) collection which provides 52 pre-built slash commands:
+对于复杂的多代理编排，使用 [Claude Code Commands](https://github.com/wshobson/commands) 集合，它提供52个预构建的斜杠命令：
 
 ```
-/full-stack-feature   # Coordinates 8+ agents for complete feature development
-/incident-response    # Activates incident management workflow
-/ml-pipeline         # Sets up end-to-end ML infrastructure
-/security-hardening  # Implements security best practices across stack
+/full-stack-feature   # 协调8+个代理进行完整功能开发
+/incident-response    # 激活事件管理工作流
+/ml-pipeline         # 设置端到端ML基础设施
+/security-hardening  # 在整个技术栈中实施安全最佳实践
 ```
 
-## Subagent Format
+## 子代理格式
 
-Each subagent is defined as a Markdown file with frontmatter:
+每个子代理定义为带前言的Markdown文件：
 
 ```markdown
 ---
 name: subagent-name
-description: Activation criteria for this subagent
-model: haiku|sonnet|opus  # Optional: Model selection
-tools: tool1, tool2       # Optional: Tool restrictions
+description: 此子代理的激活条件
+model: haiku|sonnet|opus  # 可选：模型选择
+tools: tool1, tool2       # 可选：工具限制
 ---
 
-System prompt defining the subagent's expertise and behavior
+定义子代理专业知识和行为的系统提示
 ```
 
-### Model Selection Criteria
+### 模型选择标准
 
-- **haiku**: Simple, deterministic tasks with minimal reasoning
-- **sonnet**: Standard development and engineering tasks
-- **opus**: Complex analysis, architecture, and critical operations
+- **haiku**: 简单、确定性任务，最少推理
+- **sonnet**: 标准开发和工程任务
+- **opus**: 复杂分析、架构和关键操作
 
-## Agent Orchestration Patterns
+## 代理编排模式
 
-### Sequential Processing
-Agents execute in sequence, passing context forward:
+### 顺序处理
+代理按顺序执行，向前传递上下文：
 ```
 backend-architect → frontend-developer → test-automator → security-auditor
 ```
 
-### Parallel Execution
-Multiple agents work simultaneously on different aspects:
+### 并行执行
+多个代理同时处理不同方面：
 ```
-performance-engineer + database-optimizer → Merged analysis
+performance-engineer + database-optimizer → 合并分析
 ```
 
-### Conditional Routing
-Dynamic agent selection based on analysis:
+### 条件路由
+基于分析的动态代理选择：
 ```
 debugger → [backend-architect | frontend-developer | devops-troubleshooter]
 ```
 
-### Validation Pipeline
-Primary work followed by specialized review:
+### 验证管道
+主要工作后跟专门审查：
 ```
-payment-integration → security-auditor → Validated implementation
+payment-integration → security-auditor → 验证实现
 ```
 
-## Agent Selection Guide
+## 代理选择指南
 
-### Architecture & Planning
+### 架构与规划
 
-| Task | Recommended Agent | Key Capabilities |
+| 任务 | 推荐代理 | 关键能力 |
 |------|------------------|------------------|
-| API Design | `backend-architect` | RESTful APIs, microservices, database schemas |
-| Cloud Infrastructure | `cloud-architect` | AWS/Azure/GCP design, scalability planning |
-| UI/UX Design | `ui-ux-designer` | Interface design, wireframes, design systems |
-| System Architecture | `architect-reviewer` | Pattern validation, consistency analysis |
+| API设计 | `backend-architect` | RESTful API、微服务、数据库模式 |
+| 云基础设施 | `cloud-architect` | AWS/Azure/GCP设计、可扩展性规划 |
+| UI/UX设计 | `ui-ux-designer` | 界面设计、线框图、设计系统 |
+| 系统架构 | `architect-reviewer` | 模式验证、一致性分析 |
 
-### Development by Language
+### 按语言开发
 
-| Language Category | Agents | Primary Use Cases |
+| 语言类别 | 代理 | 主要用例 |
 |-------------------|--------|-------------------|
-| Systems Programming | `c-pro`, `cpp-pro`, `rust-pro`, `golang-pro` | OS interfaces, embedded systems, high performance |
-| Web Development | `javascript-pro`, `typescript-pro`, `python-pro`, `ruby-pro`, `php-pro` | Full-stack web applications, APIs, scripting |
-| Enterprise | `java-pro`, `csharp-pro`, `scala-pro` | Large-scale applications, enterprise systems |
-| Mobile | `ios-developer`, `flutter-expert`, `mobile-developer` | Native and cross-platform mobile apps |
-| Specialized | `elixir-pro`, `unity-developer`, `minecraft-bukkit-pro` | Domain-specific development |
+| 系统编程 | `c-pro`, `cpp-pro`, `rust-pro`, `golang-pro` | OS接口、嵌入式系统、高性能 |
+| Web开发 | `javascript-pro`, `typescript-pro`, `python-pro`, `ruby-pro`, `php-pro` | 全栈Web应用、API、脚本 |
+| 企业级 | `java-pro`, `csharp-pro`, `scala-pro` | 大规模应用、企业系统 |
+| 移动端 | `ios-developer`, `flutter-expert`, `mobile-developer` | 原生和跨平台移动应用 |
+| 专业化 | `elixir-pro`, `unity-developer`, `minecraft-bukkit-pro` | 特定领域开发 |
 
-### Operations & Infrastructure
+### 运维与基础设施
 
-| Task | Recommended Agent | Key Capabilities |
+| 任务 | 推荐代理 | 关键能力 |
 |------|------------------|------------------|
-| Production Issues | `devops-troubleshooter` | Log analysis, deployment debugging |
-| Critical Incidents | `incident-responder` | Outage response, immediate mitigation |
-| Database Performance | `database-optimizer` | Query optimization, indexing strategies |
-| Database Operations | `database-admin` | Backup, replication, disaster recovery |
-| Infrastructure as Code | `terraform-specialist` | Terraform modules, state management |
-| Network Issues | `network-engineer` | Network debugging, load balancing |
+| 生产问题 | `devops-troubleshooter` | 日志分析、部署调试 |
+| 关键事件 | `incident-responder` | 中断响应、即时缓解 |
+| 数据库性能 | `database-optimizer` | 查询优化、索引策略 |
+| 数据库运维 | `database-admin` | 备份、复制、灾难恢复 |
+| 基础设施即代码 | `terraform-specialist` | Terraform模块、状态管理 |
+| 网络问题 | `network-engineer` | 网络调试、负载均衡 |
 
-### Quality & Security
+### 质量与安全
 
-| Task | Recommended Agent | Key Capabilities |
+| 任务 | 推荐代理 | 关键能力 |
 |------|------------------|------------------|
-| Code Review | `code-reviewer` | Security focus, best practices |
-| Security Audit | `security-auditor` | Vulnerability scanning, OWASP compliance |
-| Test Creation | `test-automator` | Unit, integration, E2E test suites |
-| Performance Issues | `performance-engineer` | Profiling, optimization |
-| Bug Investigation | `debugger` | Error resolution, root cause analysis |
+| 代码审查 | `code-reviewer` | 安全焦点、最佳实践 |
+| 安全审计 | `security-auditor` | 漏洞扫描、OWASP合规 |
+| 测试创建 | `test-automator` | 单元、集成、E2E测试套件 |
+| 性能问题 | `performance-engineer` | 分析、优化 |
+| Bug调查 | `debugger` | 错误解决、根因分析 |
 
-### Data & Machine Learning
+### 数据与机器学习
 
-| Task | Recommended Agent | Key Capabilities |
+| 任务 | 推荐代理 | 关键能力 |
 |------|------------------|------------------|
-| Data Analysis | `data-scientist` | SQL queries, statistical analysis |
-| LLM Applications | `ai-engineer` | RAG systems, prompt pipelines |
-| ML Development | `ml-engineer` | Model training, feature engineering |
-| ML Operations | `mlops-engineer` | ML infrastructure, experiment tracking |
+| 数据分析 | `data-scientist` | SQL查询、统计分析 |
+| LLM应用 | `ai-engineer` | RAG系统、提示管道 |
+| ML开发 | `ml-engineer` | 模型训练、特征工程 |
+| ML运维 | `mlops-engineer` | ML基础设施、实验跟踪 |
 
-### Documentation & Business
+### 文档与业务
 
-| Task | Recommended Agent | Key Capabilities |
+| 任务 | 推荐代理 | 关键能力 |
 |------|------------------|------------------|
-| Technical Docs | `docs-architect` | Comprehensive documentation generation |
-| API Documentation | `api-documenter` | OpenAPI/Swagger specifications |
-| Business Metrics | `business-analyst` | KPI tracking, reporting |
-| Legal Compliance | `legal-advisor` | Privacy policies, terms of service |
+| 技术文档 | `docs-architect` | 综合文档生成 |
+| API文档 | `api-documenter` | OpenAPI/Swagger规范 |
+| 业务指标 | `business-analyst` | KPI跟踪、报告 |
+| 法律合规 | `legal-advisor` | 隐私政策、服务条款 |
 
-## Best Practices
+## 最佳实践
 
-### Task Delegation
-1. **Automatic selection** - Let Claude Code analyze context and select optimal agents
-2. **Clear requirements** - Specify constraints, tech stack, and quality standards
-3. **Trust specialization** - Each agent is optimized for their specific domain
+### 任务委派
+1. **自动选择** - 让Claude Code分析上下文并选择最佳代理
+2. **明确需求** - 指定约束、技术栈和质量标准
+3. **信任专业化** - 每个代理都针对其特定领域进行了优化
 
-### Multi-Agent Workflows
-1. **High-level requests** - Allow agents to coordinate complex multi-step tasks
-2. **Context preservation** - Ensure agents have necessary background information
-3. **Integration review** - Verify how different agents' outputs work together
+### 多代理工作流
+1. **高级请求** - 允许代理协调复杂的多步任务
+2. **上下文保持** - 确保代理具有必要的背景信息
+3. **集成审查** - 验证不同代理的输出如何协同工作
 
-### Explicit Control
-1. **Direct invocation** - Specify agents when you need particular expertise
-2. **Strategic combination** - Use multiple specialists for validation
-3. **Review patterns** - Request specific review workflows (e.g., "security-auditor reviews API design")
+### 显式控制
+1. **直接调用** - 在需要特定专业知识时指定代理
+2. **战略组合** - 使用多个专家进行验证
+3. **审查模式** - 请求特定的审查工作流（例如"security-auditor审查API设计"）
 
-### Performance Optimization
-1. **Monitor effectiveness** - Track which agents work best for your use cases
-2. **Iterative refinement** - Use agent feedback to improve requirements
-3. **Complexity matching** - Align task complexity with agent capabilities
+### 性能优化
+1. **监控效果** - 跟踪哪些代理最适合您的用例
+2. **迭代改进** - 使用代理反馈改进需求
+3. **复杂性匹配** - 将任务复杂性与代理能力对齐
 
-## Contributing
+## 贡献
 
-To add a new subagent:
+要添加新的子代理：
 
-1. Create a new `.md` file with appropriate frontmatter
-2. Use lowercase, hyphen-separated naming convention
-3. Write clear activation criteria in the description
-4. Define comprehensive system prompt with expertise areas
+1. 创建带适当前言的新`.md`文件
+2. 使用小写、连字符分隔的命名约定
+3. 在描述中编写清晰的激活条件
+4. 定义带专业领域的综合系统提示
 
-## Troubleshooting
+## 故障排除
 
-### Agent Not Activating
-- Ensure request clearly indicates the domain
-- Be specific about task type and requirements
-- Use explicit invocation if automatic selection fails
+### 代理未激活
+- 确保请求明确指示领域
+- 具体说明任务类型和需求
+- 如果自动选择失败，使用显式调用
 
-### Unexpected Agent Selection
-- Provide more context about tech stack
-- Include specific requirements in request
-- Use direct agent naming for precise control
+### 意外的代理选择
+- 提供更多关于技术栈的上下文
+- 在请求中包含具体需求
+- 使用直接代理命名进行精确控制
 
-### Conflicting Recommendations
-- Normal behavior - specialists have different priorities
-- Request reconciliation between specific agents
-- Consider trade-offs based on project requirements
+### 冲突建议
+- 正常行为 - 专家有不同的优先级
+- 请求特定代理之间的协调
+- 根据项目需求考虑权衡
 
-### Missing Context
-- Include background information in requests
-- Reference previous work or patterns
-- Provide project-specific constraints
+### 缺少上下文
+- 在请求中包含背景信息
+- 引用先前的工作或模式
+- 提供项目特定的约束
 
-## License
+## 许可证
 
-MIT License - see [LICENSE](LICENSE) file for details.
+MIT许可证 - 详见 [LICENSE](LICENSE) 文件。
 
-## Resources
+## 资源
 
-- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
-- [Subagents Documentation](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
+- [Claude Code文档](https://docs.anthropic.com/en/docs/claude-code)
+- [子代理文档](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
 - [Claude Code GitHub](https://github.com/anthropics/claude-code)
 - [Claude Code Commands](https://github.com/wshobson/commands)
