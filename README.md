@@ -164,7 +164,7 @@
 
 ```bash
 cd ~/.claude
-git clone https://github.com/wshobson/agents.git
+git clone -b model-cn --single-branch https://github.com/Minority2310/claudecode-agents.git
 ```
 
 子代理放置在 `~/.claude/agents/` 目录后将自动可用于Claude Code。
@@ -289,12 +289,6 @@ tools: tool1, tool2       # 可选：工具限制
 
 定义子代理专业知识和行为的系统提示
 ```
-
-### 模型选择标准
-
-- **haiku**: 简单、确定性任务，最少推理
-- **sonnet**: 标准开发和工程任务
-- **opus**: 复杂分析、架构和关键操作
 
 ## 代理编排模式
 
